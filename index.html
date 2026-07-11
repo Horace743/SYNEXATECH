@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synexa Tech — Ensemble, façonnons votre avenir numérique</title>
+<meta name="description" content="Synexa Tech conçoit des solutions numériques innovantes, sécurisées et sur mesure qui accompagnent les entreprises dans leur croissance et leur transformation digitale.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- Évite le flash de mauvais thème au chargement -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem("synexa-theme");
+      var theme = saved || "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Polices de la charte graphique : Montserrat (logo), Poppins (titres), Inter (texte) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<!-- ===== EN-TÊTE ===== -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Synexa Tech — Accueil">
+      <img src="assets/icon-hexagon.png" alt="" class="brand-icon" width="38" height="55">
+      <span class="brand-word">
+        <span class="brand-synexa">SYNEXA</span><span class="brand-tech">TECH</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#valeurs">Valeurs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Activer le mode clair">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.5 4.5l1.7 1.7M17.8 17.8l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.5 19.5l1.7-1.7M17.8 6.2l1.7-1.7"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-nav btn-sm">Nous contacter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="accueil">
+    <canvas id="hexField" class="hex-field" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-inner reveal" id="top">
+          <p class="pill"><span class="pill-dot"></span>Innover · Créer · Transformer</p>
+          <h1 class="hero-title">Ensemble, façonnons<br>votre <span class="text-gold">avenir numérique</span>.</h1>
+          <p class="hero-lead">
+            Synexa Tech conçoit des solutions numériques innovantes, sécurisées et sur mesure
+            qui accompagnent les entreprises dans leur croissance et leur transformation digitale.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Découvrir nos services
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">Parler à un expert</a>
+          </div>
+        </div>
+        <div class="about-visual reveal" style="--i:2">
+          <svg viewBox="0 0 360 360" aria-hidden="true">
+            <circle cx="180" cy="180" r="150" fill="none" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 8"/>
+            <circle cx="180" cy="180" r="105" fill="url(#gradCircleHero)" opacity=".12"/>
+            <image href="assets/Image.png" x="-5" y="-10" width="700" height="400"/>
+            <defs>
+              <radialGradient id="gradCircleHero"><stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></radialGradient>
+            </defs>
+          </svg>
+          
+        </div>
+        
+      </div> 
+
+      <div class="stats-strip reveal" style="--i:3">
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.4 4.2 4.8.9-3.4 3.5.7 4.8L12 14.2 7.5 16.4l.7-4.8-3.4-3.5 4.8-.9L12 3z"/></svg></div>
+          <div><div class="stat-value">4 pôles</div><div class="stat-label">D'expertise réunis</div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5l2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.5l-5.6 3 1.3-6.2-4.7-4.3 6.3-.7L12 2.5z"/></svg></div>
+          <div><div class="stat-value">100%</div><div class="stat-label">Solutions sur mesure</div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <div><div class="stat-value">24/7</div><div class="stat-label">Disponibilité</div></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+          <div><div class="stat-value">1 équipe</div><div class="stat-label">Un seul interlocuteur</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre offre</p>
+        <h2>Nos services</h2>
+        <p class="section-sub">Des solutions complètes pour accompagner votre transformation digitale, du design à la sécurité.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" style="--i:1">
+          <div class="hex-badge hex-badge-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="8 9 4 12 8 15"/><polyline points="16 9 20 12 16 15"/><line x1="13.5" y1="6" x2="10.5" y2="18"/></svg>
+          </div>
+          <h3>Développement Web et Mobile</h3>
+          <p>Création de sites vitrines, sites e-commerce et plateformes web modernes. Applications Android et iOS intuitives et performantes.</p>
+          <a href="#contact" class="service-link">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service-card reveal" style="--i:2">
+          <div class="hex-badge hex-badge-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l4-1 10-10-3-3L5 16l-1 4z"/><path d="M14 6l3 3"/></svg>
+          </div>
+          <h3>Design Graphique</h3>
+          <p>Création de logos, chartes graphiques, affiches, flyers et identités visuelles.</p>
+          <a href="#contact" class="service-link">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service-card reveal" style="--i:3">
+          <div class="hex-badge hex-badge-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11v2a2 2 0 002 2h1l4 4V5L6 9H5a2 2 0 00-2 2z"/><path d="M16.5 8.5a4 4 0 010 7"/><path d="M19.5 6a8 8 0 010 12"/></svg>
+          </div>
+          <h3>Communication et Marketing Digitale</h3>
+          <p>Gestion des réseaux sociaux, création de contenu et stratégie digitale, SEO, campagnes publicitaires, référencement et visibilité en ligne.</p>
+          <a href="#contact" class="service-link">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="service-card reveal" style="--i:4">
+          <div class="hex-badge hex-badge-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+          </div>
+          <h3>Cybersécurité</h3>
+          <p>Protection des données, sécurisation des systèmes et accompagnement en cybersécurité.</p>
+          <a href="#contact" class="service-link">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUI SOMMES-NOUS ===== -->
+  <section class="section" id="apropos" style="padding-top: calc(var(--section-pad) + 4rem);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Qui sommes-nous</p>
+        <h2>Une équipe, quatre expertises, une seule mission</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal" style="--i:1">
+          <p>Synexa Tech est une agence digitale qui réunit quatre expertises complémentaires — communication, commerce international, développement et sécurité informatique — pour accompagner les entreprises dans leur transformation numérique, du premier audit jusqu'à l'international.</p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="hex-badge hex-badge-blue hex-badge-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.5.4.8 1 .8 1.7v.5h5.6v-.5c0-.7.3-1.3.8-1.7A6 6 0 0012 3z"/></svg></div>
+              <div><h4>Innovation</h4><p>Des solutions pensées pour les défis digitaux de demain.</p></div>
+            </div>
+            <div class="about-feature">
+              <div class="hex-badge hex-badge-gold hex-badge-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/></svg></div>
+              <div><h4>Qualité</h4><p>Des livrables fiables, sécurisés et pensés pour durer.</p></div>
+            </div>
+            <div class="about-feature">
+              <div class="hex-badge hex-badge-blue hex-badge-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5l2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.5l-5.6 3 1.3-6.2-4.7-4.3 6.3-.7L12 2.5z"/></svg></div>
+              <div><h4>Engagement</h4><p>Votre réussite est notre priorité, à chaque étape du projet.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal" style="--i:2">
+          <svg viewBox="0 0 360 360" aria-hidden="true">
+            <circle cx="180" cy="180" r="150" fill="none" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 8"/>
+            <circle cx="180" cy="180" r="105" fill="url(#gradCircle)" opacity=".12"/>
+            <image href="assets/icon-hexagon.png" x="29" y="-10" width="300" height="400"/>
+            <defs>
+              <radialGradient id="gradCircle"><stop offset="0" stop-color="var(--blue)"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></radialGradient>
+            </defs>
+          </svg>
+          
+        </div>
+      </div>
+
+      <div class="mv-grid">
+        <article class="mv-card reveal" style="--i:1">
+          <div class="hex-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.4 4.2 4.8.9-3.4 3.5.7 4.8L12 14.2 7.5 16.4l.7-4.8-3.4-3.5 4.8-.9L12 3z"/></svg></div>
+          <h3>Notre mission</h3>
+          <p>Concevoir des solutions numériques innovantes, sécurisées et sur mesure qui accompagnent les entreprises dans leur croissance et leur transformation digitale.</p>
+        </article>
+
+        <article class="mv-card reveal" style="--i:2">
+          <div class="hex-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+          <h3>Notre vision</h3>
+          <p>Devenir une référence africaine dans le développement de solutions numériques innovantes, fiables et accessibles.</p>
+        </article>
+      </div>
+
+      <!-- ===== COMPÉTENCES (par filière académique) ===== -->
+      <div class="section-head reveal" id="competences" style="margin-top:3.5rem; scroll-margin-top:76px;">
+        <p class="eyebrow eyebrow-gold">Nos compétences</p>
+        <h2>Les compétences de notre équipe</h2>
+        <p class="section-sub">Quatre filières académiques complémentaires structurent l'expertise technique de l'agence.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" style="--i:1">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="9" ry="4"/><path d="M12 3a16 16 0 010 18 16 16 0 010-18z"/></svg>
+          </div>
+          <h3>CIB — Commerce International et E-Business</h3>
+          <p>Stratégie commerciale, développement d'affaires à l'international, techniques de négociation, gestion de la relation client et maîtrise des dynamiques du commerce électronique.</p>
+        </article>
+
+        <article class="service-card reveal" style="--i:2">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>CDM — Communication Digitale et Web Marketing</h3>
+          <p>Conception d'identités visuelles (branding), déploiement de stratégies de communication en ligne, community management et création de contenus éditoriaux et graphiques.</p>
+        </article>
+
+        <article class="service-card reveal" style="--i:3">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="8 9 4 12 8 15"/><polyline points="16 9 20 12 16 15"/><line x1="13.5" y1="6" x2="10.5" y2="18"/></svg>
+          </div>
+          <h3>RGL — Réseau Génie Logiciel</h3>
+          <p>Maîtrise des cycles de développement d'applications, programmation, conception de solutions logicielles sur mesure et modélisation des architectures de données.</p>
+        </article>
+
+        <article class="service-card reveal" style="--i:4">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+          </div>
+          <h3>RMS — Réseau Mobilité Sécurité</h3>
+          <p>Déploiement d'infrastructures réseaux, gestion de la connectivité mobile, administration des serveurs et sécurisation des systèmes d'information.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALEURS ===== -->
+  <section class="section section-tint" id="valeurs">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-gold">Ce qui nous porte</p>
+        <h2>Nos valeurs</h2>
+      </div>
+
+      <div class="values-grid">
+
+        <article class="value-card reveal" style="--i:1">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.5.4.8 1 .8 1.7v.5h5.6v-.5c0-.7.3-1.3.8-1.7A6 6 0 0012 3z"/></svg>
+          </div>
+          <h3>Innovation</h3>
+          <p>Nous imaginons des solutions adaptées aux défis de demain.</p>
+        </article>
+
+        <article class="value-card reveal" style="--i:2">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="9" r="2.8"/><circle cx="16" cy="9.5" r="2.3"/><path d="M3.5 19c.6-2.7 2.6-4.4 5-4.4s4.4 1.7 5 4.4M14 19c.4-2 1.9-3.6 4-3.9"/></svg>
+          </div>
+          <h3>Collaboration</h3>
+          <p>Nous croyons que les meilleurs projets naissent d'un travail d'équipe étroit avec nos clients.</p>
+        </article>
+
+        <article class="value-card reveal" style="--i:3">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/></svg>
+          </div>
+          <h3>Fiabilité</h3>
+          <p>Nos solutions sont pensées pour durer et inspirer confiance.</p>
+        </article>
+
+        <article class="value-card reveal" style="--i:4">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2.5l2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 16.5l-5.6 3 1.3-6.2-4.7-4.3 6.3-.7L12 2.5z"/></svg>
+          </div>
+          <h3>Excellence</h3>
+          <p>Chaque projet est réalisé avec rigueur et souci du détail.</p>
+        </article>
+
+        <article class="value-card value-card-center reveal" style="--i:5">
+          <div class="hex-badge hex-badge-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21V9M12 9c-4 0-6-2.5-6-6 4 0 6 2 6 6zM12 13c4 0 6-2.5 6-6-4 0-6 2-6 6z"/></svg>
+          </div>
+          <h3>Évolution</h3>
+          <p>Nous apprenons et innovons en permanence pour accompagner la croissance de nos clients.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE / CITATION ===== -->
+  <section class="signature-section reveal-fade">
+    <div class="wrap">
+      <blockquote>
+        <span class="quote-glyph quote-glyph-open" aria-hidden="true">&ldquo;</span>Chez Synexa Tech, nous transformons les idées en solutions numériques innovantes.
+        Grâce à la technologie, à la créativité et à notre engagement envers l'excellence,
+        nous accompagnons les entreprises dans leur évolution vers un avenir numérique plus performant.<span class="quote-glyph quote-glyph-close" aria-hidden="true">&rdquo;</span>
+      </blockquote>
+      <p class="signature-author">— L'équipe Synexa Tech</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Parlons de votre projet</p>
+        <h2>Construisons ensemble votre prochaine étape numérique</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal" style="--i:1">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:contactsynexatech@gmail.com">contactsynexatech@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Téléphone</span>
+            <a href="tel:+22900000000">+229 01 68 29 66 34</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Localisation</span>
+            <span>Cotonou, Bénin</span>
+          </div>
+          <p class="contact-note">* Téléphone à personnaliser avant mise en ligne.</p>
+        </div>
+
+        <form class="contact-form reveal" style="--i:2" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== PIED DE PAGE ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="assets/icon-hexagon.png" alt="" class="brand-icon" width="32" height="46">
+      <div>
+        <span class="brand-word brand-word-sm">
+          <span class="brand-synexa">SYNEXA</span><span class="brand-tech">TECH</span>
+        </span>
+        <p class="footer-tagline">Ensemble, façonnons votre avenir numérique.</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Navigation du pied de page">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#valeurs">Valeurs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-social" aria-label="Réseaux sociaux">
+      <a href="https://www.linkedin.com/in/contact-synexatech-a69719421?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zM13.32 8.48H9.34V21h3.94v-6.57c0-1.66.31-3.27 2.38-3.27 2.04 0 2.07 1.91 2.07 3.37V21H21.7v-7.93c0-3.7-2.4-4.15-3.5-4.15-2.68 0-3.6 1.34-4.13 2.34h-.05V8.48z"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61591728694024" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+      <a href="https://www.instagram.com/synexa_tech?utm_source=qr&igsh=Yjd6OHg0cnY5czNy" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.13s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.76 4.9 4.9 0 01-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.76-1.15 4.9 4.9 0 01-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 015.44 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z"/></svg></a>
+      <a href="https://vt.tiktok.com/ZSXeARKCK/" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a4.28 4.28 0 01-3.03-1.4V15.4a5.5 5.5 0 11-4.72-5.44v2.5a3 3 0 103 3V2h2.68a4.28 4.28 0 003.07 3.9v2.5a6.7 6.7 0 01-1-.18v0z"/></svg></a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> Synexa Tech. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
