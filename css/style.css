@@ -131,6 +131,16 @@ svg{ display:block; }
 .float-c{ animation: floatY 6.2s ease-in-out infinite .7s; }
 .float-d{ animation: floatY-sm 5s ease-in-out infinite 1s; }
 
+/* Utilitaires d'indice de décalage (remplace les style="--i:N" en ligne,
+   ce qui permet un Content-Security-Policy strict sans 'unsafe-inline') */
+.i1{ --i: 1; }
+.i2{ --i: 2; }
+.i3{ --i: 3; }
+.i4{ --i: 4; }
+.i5{ --i: 5; }
+.section-apropos{ padding-top: calc(var(--section-pad) + 4rem); }
+.section-head-competences{ margin-top: 3.5rem; scroll-margin-top: 76px; }
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
